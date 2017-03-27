@@ -15,4 +15,9 @@ Route::get('/', function () {
     return view('form');
 });
 
-Route::post('/', 'FormController@index')->name('form');
+Route::post('/', 'FormController@index');
+
+Route::get('mail', function() {
+    return view('mail');
+});
+Route::post('send_email', 'MailController@send');
